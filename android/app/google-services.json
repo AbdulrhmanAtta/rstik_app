@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "229733317841",
+    "firebase_url": "https://rstikapp.firebaseio.com",
+    "project_id": "rstikapp",
+    "storage_bucket": "rstikapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229733317841:android:9bf29167981169a21619f0",
+        "android_client_info": {
+          "package_name": "com.coudeo.rstikapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229733317841-9hmufll3bf41vet8jke2nobidje80u93.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coudeo.rstikapp",
+            "certificate_hash": "058178f1a82ffbf73ef9b3b5ab28b6f744988b55"
+          }
+        },
+        {
+          "client_id": "229733317841-q8h1v2hmcgts5lkvpqv7a8iaqeci30tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnokdDLA8vHVHeG9QO9ReD6tY30bGtq84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229733317841-q8h1v2hmcgts5lkvpqv7a8iaqeci30tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
