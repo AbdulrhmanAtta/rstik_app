@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rstikapp/screens/cartScreen.dart';
 import 'package:rstikapp/screens/checkout.dart';
 import 'package:rstikapp/widgets/badge.dart';
 import 'menu_items/pizza.dart' as pizza;
@@ -115,6 +116,26 @@ class MyTabsState extends State<Menu> with SingleTickerProviderStateMixin {
           },
         ),
       ),
+  floatingActionButton: FloatingActionButton(
+        tooltip: "Cart",
+        onPressed: (){
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context){
+                return CartScreen();
+              },
+            ),
+          );
+        },
+        child: Icon(
+          Icons.shopping_cart,
+        ),
+        heroTag: Object(),
+      ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
+

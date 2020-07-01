@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:rstikapp/models/cart.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/widgets/cart_item.dart';
 
@@ -21,7 +23,10 @@ class _CheckoutState extends State<Checkout> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Consumer<Cart>(builder: (context, cart, child){
+      return cart.basketItems.length == 0
+                ? Text('no items in your cart')
+                : Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
@@ -129,18 +134,17 @@ class _CheckoutState extends State<Checkout> {
             ListView.builder(
               primary: false,
               shrinkWrap: true,
-              itemCount: foods == null ? 0 :foods.length,
+              itemCount: cart.basketItems == null ? 0 :cart.basketItems.length,
               itemBuilder: (BuildContext context, int index) {
 //                Food food = Food.fromJson(foods[index]);
-                Map food = foods[index];
+                // Map food = foods[index];
 //                print(foods);
 //                print(foods.length);
                 return CartItem(
-                  img: food['img'],
-                  isFav: false,
-                  name: food['name'],
-                  rating: 5.0,
-                  raters: 23,
+                 img: cart.basketItems[index].img,
+              isFav: false,
+              name: cart.basketItems[index].title,
+              price: cart.basketItems[index].price,
                 );
               },
             ),
@@ -214,9 +218,9 @@ class _CheckoutState extends State<Checkout> {
                         ),
 
                         Text(
-                          r"$ 212",
+                          "${cart.totalPrice}",
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 20,
                             fontWeight: FontWeight.w900,
                             color: Theme.of(context).accentColor,
                           ),
@@ -251,15 +255,11 @@ class _CheckoutState extends State<Checkout> {
 
                 ],
               ),
-
-
-
             ],
           ),
-
           height: 130,
         ),
       ),
     );
-  }
+    },); }
 }

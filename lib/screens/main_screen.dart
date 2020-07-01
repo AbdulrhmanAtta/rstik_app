@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rstikapp/screens/cart.dart';
+import 'package:rstikapp/screens/cartScreen.dart';
 import 'package:rstikapp/screens/favorite_screen.dart';
 import 'package:rstikapp/screens/home.dart';
 import 'package:rstikapp/screens/notifications.dart';

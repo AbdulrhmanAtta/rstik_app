@@ -10,6 +10,9 @@ class CartItem extends StatelessWidget {
   final bool isFav;
   final double rating;
   final int raters;
+  final double price;
+  final Function removeIcon;
+  
 
 
   CartItem({
@@ -18,7 +21,9 @@ class CartItem extends StatelessWidget {
     @required this.img,
     @required this.isFav,
     @required this.rating,
-    @required this.raters})
+    @required this.raters,
+    @required this.price,
+    @required this.removeIcon})
       :super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -35,6 +40,7 @@ class CartItem extends StatelessWidget {
           );
         },
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(left: 0.0, right: 10.0),
@@ -64,16 +70,16 @@ class CartItem extends StatelessWidget {
                 SizedBox(height: 10.0),
                 Row(
                   children: <Widget>[
-                    SmoothStarRating(
-                      starCount: 1,
-                      color: Constants.ratingBG,
-                      allowHalfRating: true,
-                      rating: 5.0,
-                      size: 12.0,
-                    ),
+                    // SmoothStarRating(
+                    //   starCount: 1,
+                    //   color: Constants.ratingBG,
+                    //   allowHalfRating: true,
+                    //   rating: 5.0,
+                    //   size: 12.0,
+                    // ),
                     SizedBox(width: 6.0),
                     Text(
-                      "5.0 (23 Reviews)",
+                      "",
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
@@ -94,7 +100,7 @@ class CartItem extends StatelessWidget {
                     SizedBox(width: 10.0),
 
                     Text(
-                      r"$90",
+                      "$price".toString(),
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.w900,
@@ -104,21 +110,26 @@ class CartItem extends StatelessWidget {
 
                   ],
                 ),
+                  
+                // SizedBox(height: 10.0),
 
-                SizedBox(height: 10.0),
-
-                Text(
-                  "Quantity: 1",
-                  style: TextStyle(
-                    fontSize: 11.0,
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
+                // Text(
+                //   "Quantity: 1",
+                //   style: TextStyle(
+                //     fontSize: 11.0,
+                //     fontWeight: FontWeight.w300,
+                //   ),
+                // ),
 
 
               ],
 
             ),
+           SizedBox(width: 70.0,),
+            Row(
+              children: [
+            IconButton(icon: (Icon(Icons.delete)),onPressed: removeIcon,),
+            ],)
           ],
         ),
       ),
