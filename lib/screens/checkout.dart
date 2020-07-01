@@ -24,9 +24,7 @@ class _CheckoutState extends State<Checkout> {
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(builder: (context, cart, child){
-      return cart.basketItems.length == 0
-                ? Text('no items in your cart')
-                : Scaffold(
+      return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
@@ -49,7 +47,9 @@ class _CheckoutState extends State<Checkout> {
         ],
       ),
 
-      body: Padding(
+      body: cart.basketItems.length == 0
+                ? Center(child: Text('No Items in to checkout', style: TextStyle(color: Colors.white, fontSize: 20.0,)),)
+                : Padding(
         padding: EdgeInsets.fromLTRB(10.0,0,10.0,130),
         child: ListView(
           children: <Widget>[

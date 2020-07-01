@@ -18,7 +18,7 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
     return Consumer<Cart>(builder: (context, cart, child){
       return Scaffold(
       body: cart.basketItems.length == 0
-                ? Text('no items in your cart')
+                ? Center(child: Text('No Items in your cart', style: TextStyle(color: Colors.white, fontSize: 20.0,)),)
                 : Padding(
         padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
         child: ListView.builder(
