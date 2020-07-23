@@ -239,6 +239,11 @@ class _ProfileState extends State<Profile> {
                 activeColor: Theme.of(context).accentColor,
               ),
             ),
+            RaisedButton(
+              // TODO : Khaled Hena onpressed yefta7 el chatting
+              disabledColor: Colors.redAccent.shade400,
+              child: Text("Contact Us", style: TextStyle(color: Colors.white),),
+            )
           ],
         ),
       ),

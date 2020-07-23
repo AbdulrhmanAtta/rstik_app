@@ -33,6 +33,10 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+              <meta-data
+              android:name="sqip.SQUARE_APPLICATION_ID"
+              android:value="sandbox-sq0idb-77Al5H9PTIkJnO8Ev0eTtg"
+              />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -43,5 +47,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
     </application>
 </manifest>

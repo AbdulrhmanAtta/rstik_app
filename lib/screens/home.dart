@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rstikapp/models/restaurants.dart';
 import 'package:rstikapp/screens/dishes.dart';
 import 'package:rstikapp/widgets/grid_product.dart';
 import 'package:rstikapp/widgets/home_category.dart';
@@ -6,6 +7,8 @@ import 'package:rstikapp/widgets/slider_item.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/util/categories.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:square_in_app_payments/in_app_payments.dart';
 
 
 class Home extends StatefulWidget {
@@ -26,6 +29,47 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
 
   int _current = 0;
 
+  List<Restaurant> restaurantsList = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    
+    DatabaseReference restRef = FirebaseDatabase.instance.reference();
+
+    restRef.child('restaurant').once().then((DataSnapshot snap){
+
+      var keys = snap.value.keys;
+      var data = snap.value;
+
+      restaurantsList.clear();
+
+      for(var key in keys){
+        
+        Restaurant rest = new Restaurant
+        (
+          data[key]['key'],
+          data[key]['image'],
+          data[key]['name'],
+          data[key]['description'],
+
+        );
+
+        restaurantsList.add(rest);
+
+      }
+
+      setState(() {
+
+        print('Length : $restaurantsList.length');
+       
+      }); 
+
+      InAppPayments.setSquareApplicationId('sandbox-sq0idb-77Al5H9PTIkJnO8Ev0eTtg');
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,104 +80,105 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
         padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
         child: ListView(
           children: <Widget>[
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: <Widget>[
+//                 Text(
+//                   "Restaurants",
+//                   style: TextStyle(
+//                     fontSize: 23,
+//                     fontWeight: FontWeight.w800,
+//                   ),
+//                 ),
+
+//                 FlatButton(
+//                   child: Text(
+//                     "View More",
+//                     style: TextStyle(
+// //                      fontSize: 22,
+// //                      fontWeight: FontWeight.w800,
+//                       color: Theme.of(context).accentColor,
+//                     ),
+//                   ),
+//                   onPressed: (){
+//                     Navigator.of(context).push(
+//                       MaterialPageRoute(
+//                         builder: (BuildContext context){
+//                           return DishesScreen();
+//                         },
+//                       ),
+//                     );
+//                   },
+//                 ),
+//               ],
+//             ),
+
+//             SizedBox(height: 10.0),
+
+//             //Slider Here
+
+//             CarouselSlider(
+//               height: MediaQuery.of(context).size.height/2.4,
+//               items: map<Widget>(
+//                 foods,
+//                     (index, i){
+//                       Map food = foods[index];
+//                   return SliderItem(
+//                     img: food['img'],
+//                     isFav: false,
+//                     name: food['name'],
+//                     rating: 5.0,
+//                     raters: 23,
+//                   );
+//                 },
+//               ).toList(),
+//               autoPlay: true,
+// //                enlargeCenterPage: true,
+//               viewportFraction: 1.0,
+// //              aspectRatio: 2.0,
+//               onPageChanged: (index) {
+//                 setState(() {
+//                   _current = index;
+//                 });
+//               },
+//             ),
+            SizedBox(height: 20.0),
+
+            // Text(
+            //   "Categories",
+            //   style: TextStyle(
+            //     fontSize: 23,
+            //     fontWeight: FontWeight.w800,
+            //   ),
+            // ),
+            // SizedBox(height: 10.0),
+            
+            Container(
+              height: 65.0,
+              // width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal, 
+                  shrinkWrap: true,
+                  itemCount: categories == null?0:categories.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    Map cat = categories[index];
+                    return HomeCategory(
+                      title: cat['name'],
+                      isHome: true,
+                    );
+                  },
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20.0),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   "Restaurants",
-                  style: TextStyle(
-                    fontSize: 23,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-
-                FlatButton(
-                  child: Text(
-                    "View More",
-                    style: TextStyle(
-//                      fontSize: 22,
-//                      fontWeight: FontWeight.w800,
-                      color: Theme.of(context).accentColor,
-                    ),
-                  ),
-                  onPressed: (){
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context){
-                          return DishesScreen();
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-
-            SizedBox(height: 10.0),
-
-            //Slider Here
-
-            CarouselSlider(
-              height: MediaQuery.of(context).size.height/2.4,
-              items: map<Widget>(
-                foods,
-                    (index, i){
-                      Map food = foods[index];
-                  return SliderItem(
-                    img: food['img'],
-                    isFav: false,
-                    name: food['name'],
-                    rating: 5.0,
-                    raters: 23,
-                  );
-                },
-              ).toList(),
-              autoPlay: true,
-//                enlargeCenterPage: true,
-              viewportFraction: 1.0,
-//              aspectRatio: 2.0,
-              onPageChanged: (index) {
-                setState(() {
-                  _current = index;
-                });
-              },
-            ),
-            SizedBox(height: 20.0),
-
-            Text(
-              "Categories",
-              style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-            SizedBox(height: 10.0),
-
-            Container(
-              height: 65.0,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemCount: categories == null?0:categories.length,
-                itemBuilder: (BuildContext context, int index) {
-                  Map cat = categories[index];
-                  return HomeCategory(
-                    icon: cat['icon'],
-                    title: cat['name'],
-                    items: cat['items'].toString(),
-                    isHome: true,
-                  );
-                },
-              ),
-            ),
-
-            SizedBox(height: 20.0),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "Popular Restaurants",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w800,
@@ -164,16 +209,16 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                 childAspectRatio: MediaQuery.of(context).size.width /
                     (MediaQuery.of(context).size.height / 1.25),
               ),
-              itemCount: foods == null ? 0 :foods.length,
+              itemCount: restaurantsList == null ? 0 :restaurantsList.length,
               itemBuilder: (BuildContext context, int index) {
 //                Food food = Food.fromJson(foods[index]);
-                Map food = foods[index];
+                 Map food = foods[index];
 //                print(foods);
 //                print(foods.length);
                 return GridProduct(
                   img: food['img'],
                   isFav: false,
-                  name: food['name'],
+                  name: restaurantsList[index].name,
                   rating: 5.0,
                   raters: 23,
                 );
@@ -181,6 +226,15 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
             ),
 
             SizedBox(height: 30),
+
+            // Container(
+            //   child: restaurantsList.length == 0 ? new Text('No data') : 
+            //   ListView.builder(itemCount: restaurantsList == null ? 0 :restaurantsList.length,
+            //   itemBuilder: (BuildContext context, int index){
+            //     return Text('$restaurantsList');
+            //   }) ,
+            // ),
+
           ],
         ),
       ),

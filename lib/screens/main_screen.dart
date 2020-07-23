@@ -25,6 +25,11 @@ class _MainScreenState extends State<MainScreen> {
       onWillPop: ()=>Future.value(false),
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(icon: Icon(
+                Icons.language,
+                size: 22.0,
+                
+              ),),
           automaticallyImplyLeading: false,
           centerTitle: true,
           title: Text(
@@ -34,7 +39,7 @@ class _MainScreenState extends State<MainScreen> {
           actions: <Widget>[
             IconButton(
               icon: IconBadge(
-                icon: Icons.notifications,
+                icon: Icons.turned_in,
                 size: 22.0,
               ),
 

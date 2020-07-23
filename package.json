@@ -1,0 +1,31 @@
+{
+  "name": "rstik_app",
+  "version": "1.0.0",
+  "description": "restaurant booking table",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulrhmanAtta/rstik_app.git"
+  },
+  "keywords": [
+    "Abdulrhman232"
+  ],
+  "author": "AbdulrhmanAtta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulrhmanAtta/rstik_app/issues"
+  },
+  "homepage": "https://github.com/AbdulrhmanAtta/rstik_app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "square-connect": "^4.20200722.1"
+  }
+}

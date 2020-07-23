@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rstikapp/screens/restaurant.dart';
+import 'package:rstikapp/screens/restaurantScreen.dart';
 import 'package:rstikapp/util/const.dart';
 import 'package:rstikapp/widgets/smooth_star_rating.dart';
 

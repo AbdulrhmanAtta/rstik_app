@@ -4,6 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:rstikapp/models/cart.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/widgets/cart_item.dart';
+import 'package:square_in_app_payments/in_app_payments.dart';
+import 'package:square_in_app_payments/models.dart';
+
 
 class Checkout extends StatefulWidget {
   @override
@@ -14,6 +17,29 @@ class _CheckoutState extends State<Checkout> {
 
   final TextEditingController _couponlControl = new TextEditingController();
 
+  void pay(){
+    InAppPayments.setSquareApplicationId('sandbox-sq0idb-77Al5H9PTIkJnO8Ev0eTtg');
+    InAppPayments.startCardEntryFlow(
+      onCardNonceRequestSuccess: _cardnonceRequestSuccess,
+      onCardEntryCancel: _cardEntryCancel,
+    );
+  }
+
+  void _cardEntryCancel(){
+    // Nothing
+  }
+
+  void _cardnonceRequestSuccess(CardDetails result){
+
+    print('Nonce: ' + result.nonce);
+    InAppPayments.completeCardEntry(
+      onCardEntryComplete: _cardEntryComplete,
+    );
+  }
+
+  void _cardEntryComplete(){
+    // successful charged
+  }
 
   @override
   void initState() {
@@ -96,17 +122,23 @@ class _CheckoutState extends State<Checkout> {
             ),
             SizedBox(height: 10.0),
 
-            Card(
-              elevation: 4.0,
+            Container(
               child: ListTile(
-                title: Text("John Doe"),
-                subtitle: Text(
-                  "5506 7744 8610 9638",
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w900,
-                  ),
+                title: RaisedButton(
+                  onPressed: (){
+                    pay();
+                  },
+                  color: Colors.red.shade400,
+                  child: Text("Add Card", style: TextStyle(color: Colors.white),),
                 ),
+                // Text("John Doe"),
+                // subtitle: Text(
+                //   "5506 7744 8610 9638",
+                //   style: TextStyle(
+                //     fontSize: 13,
+                //     fontWeight: FontWeight.w900,
+                //   ),
+                // ),
                 leading: Icon(
                   FontAwesomeIcons.creditCard,
                   size: 50.0,
@@ -115,7 +147,7 @@ class _CheckoutState extends State<Checkout> {
                 trailing: IconButton(
                   onPressed: (){},
                   icon: Icon(
-                    Icons.keyboard_arrow_down,
+                    Icons.arrow_forward,
                   ),
                 ),
               ),
@@ -152,8 +184,8 @@ class _CheckoutState extends State<Checkout> {
         ),
       ),
 
-      bottomSheet: Card(
-        elevation: 4.0,
+      bottomSheet: Container(
+        
         child: Container(
 
           child: ListView(
