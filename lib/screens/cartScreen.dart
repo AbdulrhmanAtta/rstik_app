@@ -20,7 +20,7 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
       body: cart.basketItems.length == 0
                 ? Center(child: Text('No Items in your cart', style: TextStyle(color: Colors.white, fontSize: 20.0,)),)
                 : Padding(
-        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
+        padding: EdgeInsets.fromLTRB(10.0,0,8.0,0),
         child: ListView.builder(
           itemCount: cart.basketItems == null ? 0 :cart.basketItems.length,
           itemBuilder: (BuildContext context, int index) {
@@ -71,13 +71,7 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
                           ),
                         ),
                         SizedBox(height: 8.0,),
-                        Text(
-                          "Delivery charges included",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
+                        
                       ],
                     ),
                   ),

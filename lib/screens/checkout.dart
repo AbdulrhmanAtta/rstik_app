@@ -76,7 +76,7 @@ class _CheckoutState extends State<Checkout> {
       body: cart.basketItems.length == 0
                 ? Center(child: Text('No Items in to checkout', style: TextStyle(color: Colors.white, fontSize: 20.0,)),)
                 : Padding(
-        padding: EdgeInsets.fromLTRB(10.0,0,10.0,130),
+        padding: EdgeInsets.fromLTRB(10.0,0,8.0,130),
         child: ListView(
           children: <Widget>[
             SizedBox(height: 10.0),

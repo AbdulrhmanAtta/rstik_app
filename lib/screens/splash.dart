@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
 
               SizedBox(width: 40.0),
-
+              
               Container(
                 alignment: Alignment.center,
                 margin: EdgeInsets.only(

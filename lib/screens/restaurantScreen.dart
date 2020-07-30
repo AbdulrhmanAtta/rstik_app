@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rstikapp/models/restaurants.dart';
 import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/screens/menu.dart';
+import 'package:rstikapp/screens/menuShow.dart';
 import 'package:rstikapp/screens/notifications.dart';
 import 'package:rstikapp/screens/reservation.dart';
 import 'package:rstikapp/util/comments.dart';
@@ -189,7 +190,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Menu()),
+                            MaterialPageRoute(builder: (context) => MenuShow()),
                           );
                         },
                       ),

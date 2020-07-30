@@ -152,25 +152,39 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
             //   ),
             // ),
             // SizedBox(height: 10.0),
-            
-            Container(
-              height: 65.0,
-              // width: MediaQuery.of(context).size.width,
-              child: Center(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal, 
-                  shrinkWrap: true,
-                  itemCount: categories == null?0:categories.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    Map cat = categories[index];
-                    return HomeCategory(
-                      title: cat['name'],
-                      isHome: true,
-                    );
-                  },
-                ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Expanded(
+                  child: FlatButton(
+                  shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
+                  child: Text('All', style: TextStyle(fontSize: 15.0),),),
               ),
-            ),
+              Expanded(child: FlatButton(
+                shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
+                child: Text('Popular', style: TextStyle(fontSize: 15.0),),)),
+              Expanded(
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
+                  child: Text('Nearby', style: TextStyle(fontSize: 15.0),),)),
+            ],),
+            // RaisedButton(
+            //   // width: MediaQuery.of(context).size.width,
+            //   child: Center(
+            //     child: ListView.builder(
+            //       scrollDirection: Axis.horizontal, 
+            //       shrinkWrap: true,
+            //       itemCount: categories == null?0:categories.length,
+            //       itemBuilder: (BuildContext context, int index) {
+            //         Map cat = categories[index];
+            //         return HomeCategory(
+            //           title: cat['name'],
+            //           isHome: true,
+            //         );
+            //       },
+            //     ),
+            //   ),
+            // ),
 
             SizedBox(height: 20.0),
 

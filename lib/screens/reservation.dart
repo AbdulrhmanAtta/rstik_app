@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/widgets/badge.dart';
 
 import 'notifications.dart';
@@ -22,6 +23,8 @@ class _ReservationState extends State<Reservation> {
   List<DateTime> selectedDates = List();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   int num = 7;
+  String smokerVal, nonsmokerVal, alcoholsVal, nonalcoholVal;
+  
 
   Color smoker = inactiveColor;
   Color nonSmoker = inactiveColor;
@@ -325,13 +328,13 @@ class _ReservationState extends State<Reservation> {
         ),
       ),
       bottomNavigationBar: Container(
-        height: 50.0,
+        height: 40.0,
         child: RaisedButton(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Checkout ",
-              style: TextStyle(color: Colors.white, fontSize: 20.0),),
+              // Text("Checkout ",
+              // style: TextStyle(color: Colors.white, fontSize: 20.0),),
 
               Icon(
                 Icons.arrow_forward,
@@ -343,7 +346,7 @@ class _ReservationState extends State<Reservation> {
           onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Reservation()),
+              MaterialPageRoute(builder: (context) => Menu()),
             );
           },
         ),

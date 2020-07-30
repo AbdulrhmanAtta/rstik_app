@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Constants{
 
-  static String appName = "RSTIK";
+  static String appName = "RSTIKA";
 
   //Colors for theme
 //  Color(0xfffcfcff);
