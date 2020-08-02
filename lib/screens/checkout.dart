@@ -2,20 +2,48 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:rstikapp/models/cart.dart';
+import 'package:rstikapp/screens/reservation.dart';
+import 'package:rstikapp/screens/thankyou.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/widgets/cart_item.dart';
 import 'package:square_in_app_payments/in_app_payments.dart';
 import 'package:square_in_app_payments/models.dart';
 
+enum Smoke {
+  smoking,
+  nonSmoking,
+}
+enum Alcohol {
+  alcoholic,
+  nonAlcoholic,
+}
+
 
 class Checkout extends StatefulWidget {
+  
+  Smoke selectSmoke;
+  Alcohol selectAlcohol;
+  DateTime date;
+  int people;
+  Checkout({Key key, @required this.selectSmoke, @required this.selectAlcohol, @required this.people, @required this.date}) : super(key : key);
+  
   @override
-  _CheckoutState createState() => _CheckoutState();
+  _CheckoutState createState() => _CheckoutState(selectSmoke, selectAlcohol, people, date);
+
 }
 
 class _CheckoutState extends State<Checkout> {
 
+  Smoke selectSmoke;
+  Alcohol selectAlcohol;
+  DateTime date;
+  int people;
+  _CheckoutState(this.selectSmoke,this.selectAlcohol, this.people, this.date);
+
+
   final TextEditingController _couponlControl = new TextEditingController();
+   String smokeVal ="Smoke";
+   String alcoholsVal ="Alcoholic";
 
   void pay(){
     InAppPayments.setSquareApplicationId('sandbox-sq0idb-77Al5H9PTIkJnO8Ev0eTtg');
@@ -123,6 +151,7 @@ class _CheckoutState extends State<Checkout> {
             SizedBox(height: 10.0),
 
             Container(
+              color: Colors.grey.shade100,
               child: ListTile(
                 title: RaisedButton(
                   onPressed: (){
@@ -131,14 +160,7 @@ class _CheckoutState extends State<Checkout> {
                   color: Colors.red.shade400,
                   child: Text("Add Card", style: TextStyle(color: Colors.white),),
                 ),
-                // Text("John Doe"),
-                // subtitle: Text(
-                //   "5506 7744 8610 9638",
-                //   style: TextStyle(
-                //     fontSize: 13,
-                //     fontWeight: FontWeight.w900,
-                //   ),
-                // ),
+
                 leading: Icon(
                   FontAwesomeIcons.creditCard,
                   size: 50.0,
@@ -148,6 +170,48 @@ class _CheckoutState extends State<Checkout> {
                   onPressed: (){},
                   icon: Icon(
                     Icons.arrow_forward,
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20.0),
+
+               Text(
+              "Reserved Table",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            SizedBox(height: 10.0),
+
+             Container(
+              child: ListTile(
+                title: 
+                Text("Number of People: " + people.toString() + "\nDate & Time: " + date.toString(),
+                style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w900,
+                  ),),
+                // subtitle: Text(
+                //   smokeVal + " " + alcoholsVal,
+                //   style: TextStyle(
+                //     fontSize: 13,
+                //     fontWeight: FontWeight.w900,
+                //   ),
+                // ),
+                leading: Icon(
+                  FontAwesomeIcons.table,
+                  size: 50.0,
+                  color: Theme.of(context).accentColor,
+                ),
+                trailing: IconButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Reservation(),));
+                  },
+                  icon: Icon(
+                    Icons.edit,
                   ),
                 ),
               ),
@@ -177,6 +241,7 @@ class _CheckoutState extends State<Checkout> {
               isFav: false,
               name: cart.basketItems[index].title,
               price: cart.basketItems[index].price,
+              removeIcon: (){cart.remove(cart.basketItems[index]);},
                 );
               },
             ),
@@ -281,7 +346,9 @@ class _CheckoutState extends State<Checkout> {
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Thankyou(),));
+                      },
                     ),
                   ),
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:rstikapp/screens/checkout.dart';
 import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/widgets/badge.dart';
 
@@ -10,11 +11,18 @@ import 'notifications.dart';
 
 Color inactiveColor = Colors.grey;
 Color activeColor = Colors.red[400];
+enum Smoke {
+  smoking,
+  nonSmoking,
+}
+enum Alcohol {
+  alcoholic,
+  nonAlcoholic,
+}
 
 class Reservation extends StatefulWidget {
   @override
   _ReservationState createState() => _ReservationState();
-
 }
 
 class _ReservationState extends State<Reservation> {
@@ -22,53 +30,19 @@ class _ReservationState extends State<Reservation> {
   DateTime selectedDate = DateTime.now();
   List<DateTime> selectedDates = List();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  int num = 7;
-  String smokerVal, nonsmokerVal, alcoholsVal, nonalcoholVal;
+  int people = 7;
+  DateTime dateVal;
   
-
-  Color smoker = inactiveColor;
+  Smoke selectSmoke;
+  Alcohol selectAlcohol;
+  Color smoker = activeColor;
   Color nonSmoker = inactiveColor;
-  Color alcoholic = inactiveColor;
-  Color nonAlcoholic = inactiveColor;
 
-  //type 1 = smoker or type 2 = non-smoker
-  void updateColor (int type){
-    if(type == 1){
-      if(smoker == inactiveColor){
-        smoker = activeColor;
-        nonSmoker = inactiveColor;
-
-      }else {
-        smoker = inactiveColor;
-      }
-    } if(type == 2){
-      if(nonSmoker == inactiveColor){
-        nonSmoker = activeColor;
-        smoker = inactiveColor;
-      }else{
-        nonSmoker = inactiveColor;
-      }
+  void showSnackbar(String x) {
+      _scaffoldKey.currentState.showSnackBar(SnackBar(
+        content: Text(x),
+      ));
     }
-  }
-
-  void updateColorAlcohol (int type){
-    if(type == 1){
-      if(alcoholic == inactiveColor){
-        alcoholic = activeColor;
-        nonAlcoholic = inactiveColor;
-
-      }else {
-        alcoholic = inactiveColor;
-      }
-    } if(type == 2){
-      if(nonAlcoholic == inactiveColor){
-        nonAlcoholic = activeColor;
-        alcoholic = inactiveColor;
-      }else{
-        nonAlcoholic = inactiveColor;
-      }
-    }
-  }
 
   @override
   void initState() {
@@ -79,12 +53,6 @@ class _ReservationState extends State<Reservation> {
 
   @override
   Widget build(BuildContext context) {
-
-    void showSnackbar(String x) {
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
-        content: Text(x),
-      ));
-    }
 
     return Scaffold(
       appBar: AppBar(
@@ -120,7 +88,7 @@ class _ReservationState extends State<Reservation> {
       ),
       body: Builder(
         builder: (context) => Padding(
-          padding: EdgeInsets.fromLTRB(10.0,20.0,10.0,0),
+          padding: EdgeInsets.fromLTRB(10.0,0.0,10.0,0),
 
           child: SafeArea(
             child: Column(
@@ -152,12 +120,14 @@ class _ReservationState extends State<Reservation> {
                                       IconButton(
                                             onPressed: (){
                                               setState(() {
-                                                updateColor(1);
+                                                selectSmoke = Smoke.smoking;
                                              });
                                             },
                                             icon: Icon(
                                               Icons.smoking_rooms,
-                                              color: smoker,
+                                               color: selectSmoke == Smoke.smoking
+                                              ? smoker
+                                              : nonSmoker
                                             ),
                                             
                                       ),
@@ -174,12 +144,14 @@ class _ReservationState extends State<Reservation> {
                                          IconButton(
                                             onPressed: (){
                                               setState(() {
-                                           updateColorAlcohol(1);
+                                          selectAlcohol = Alcohol.alcoholic;
                                              });
                                             },
                                             icon: Icon(
                                               Icons.local_bar,
-                                              color: alcoholic,
+                                               color: selectAlcohol == Alcohol.alcoholic
+                                              ? smoker
+                                              : nonSmoker,
                                             ),
                                             
                                       ),
@@ -201,12 +173,14 @@ class _ReservationState extends State<Reservation> {
                                           IconButton(
                                             onPressed: (){
                                               setState(() {
-                                           updateColor(2);
+                                          selectSmoke = Smoke.nonSmoking;
                                              });
                                             },
                                             icon: Icon(
                                               Icons.smoke_free,
-                                              color: nonSmoker,
+                                               color: selectSmoke == Smoke.nonSmoking
+                                              ? smoker
+                                              : nonSmoker,
                                             ),
                                             
                                       ),
@@ -225,12 +199,14 @@ class _ReservationState extends State<Reservation> {
                                           IconButton(
                                             onPressed: (){
                                               setState(() {
-                                           updateColorAlcohol(2);
+                                           selectAlcohol = Alcohol.nonAlcoholic;
                                              });
                                             },
                                             icon: Icon(
                                               Icons.not_interested,
-                                              color: nonAlcoholic
+                                               color: selectAlcohol == Alcohol.nonAlcoholic
+                                              ? smoker
+                                              : nonSmoker,
                                             ),
                                             
                                       ),
@@ -264,20 +240,20 @@ class _ReservationState extends State<Reservation> {
                               ),
                             ),
                             Slider(
-                              value: num.toDouble(),
+                              value: people.toDouble(),
                               min: 2,
                               max: 12,
                               activeColor: Theme.of(context).accentColor,
                               inactiveColor: Colors.grey,
-                              onChanged: (double newValue){
+                              onChanged: (newValue){
                                 setState(() {
-                                  num = newValue.round();
+                                  people = newValue.round();
                                 });
                               },
                             ),
                             Center(
                               child: Text(
-                                num.toString(),
+                                people.toString(),
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.w700
@@ -305,11 +281,15 @@ class _ReservationState extends State<Reservation> {
                             RaisedButton(
                               color: Colors.red[400],
                                 onPressed: () {
+                                  
                                   DatePicker.showDateTimePicker(context, showTitleActions: true, onChanged: (date) {
-                                    print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
+                                    dateVal = date;
+                                    print('change $dateVal in time zone ' + date.timeZoneOffset.inHours.toString());
                                   }, onConfirm: (date) {
-                                    print('confirm $date');
-                                  }, currentTime: DateTime(2008, 12, 31, 23, 12, 34));
+                                    print('confirm $dateVal');
+                                    Scaffold.of(context).showSnackBar(SnackBar(content: Text("Your Reservation Date: $dateVal"), 
+                                    backgroundColor: Colors.green,));
+                                  }, currentTime: DateTime.now());
                                 },
                                 child: Text(
                                   'Pick Your Date And Time',
@@ -328,7 +308,7 @@ class _ReservationState extends State<Reservation> {
         ),
       ),
       bottomNavigationBar: Container(
-        height: 40.0,
+        height: 50.0,
         child: RaisedButton(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -336,17 +316,20 @@ class _ReservationState extends State<Reservation> {
               // Text("Checkout ",
               // style: TextStyle(color: Colors.white, fontSize: 20.0),),
 
-              Icon(
-                Icons.arrow_forward,
-                color: Colors.white,
-              ),
+             Text(
+            "CHECKOUT",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
             ],
           ),
           color: Theme.of(context).accentColor,
           onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Menu()),
+              MaterialPageRoute(builder: (context) => Checkout(people: people, date: dateVal,)),
             );
           },
         ),

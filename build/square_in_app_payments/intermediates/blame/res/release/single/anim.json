@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_exit_to_right.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_exit_to_right.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_bounce_cycle_3.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_bounce_cycle_3.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_tooltip_exit.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_slide_in_top.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_tooltip_enter.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_fade_out.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_fade_in.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_exit_to_left.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_exit_to_left.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_popup_exit.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_edit_text_shake_error.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_edit_text_shake_error.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_enter_from_left.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_enter_from_left.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/sqip_enter_from_right.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/anim/sqip_enter_from_right.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_popup_enter.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/anim/abc_slide_out_top.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/anim/abc_slide_out_top.xml"
+    }
+]

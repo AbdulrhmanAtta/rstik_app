@@ -1,71 +1,46 @@
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rstikapp/models/restaurants.dart';
-import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/screens/menuShow.dart';
 import 'package:rstikapp/screens/notifications.dart';
-import 'package:rstikapp/screens/reservation.dart';
 import 'package:rstikapp/util/comments.dart';
 import 'package:rstikapp/util/const.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/widgets/badge.dart';
 import 'package:rstikapp/widgets/smooth_star_rating.dart';
-import 'package:rstikapp/screens/reservation.dart';
-import 'package:rstikapp/screens/menu.dart';
 
 class ProductDetails extends StatefulWidget {
+
+  final String name;
+  final String img;
+  final bool isFav;
+  final double rating;
+  final int raters;
+
+
+  ProductDetails({
+    Key key,
+    @required this.name,
+    @required this.img,
+    @required this.isFav,
+    @required this.rating,
+    @required this.raters})
+      :super(key: key);
+
   @override
-  _ProductDetailsState createState() => _ProductDetailsState();
+  _ProductDetailsState createState() => _ProductDetailsState(name, img, isFav, rating, raters);
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
 
- List<Restaurant> restaurantsList = [];
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    
-    DatabaseReference restRef = FirebaseDatabase.instance.reference();
-
-    restRef.child('restaurant').once().then((DataSnapshot snap){
-
-      var keys = snap.value.keys;
-      var data = snap.value;
-
-      restaurantsList.clear();
-
-      for(var key in keys){
-        
-        Restaurant rest = new Restaurant
-        (
-          data[key]['key'],
-          data[key]['image'],
-          data[key]['name'],
-          data[key]['description'],
-
-        );
-
-        restaurantsList.add(rest);
-
-      }
-
-      setState(() {
-
-        print('$restaurantsList[]');
-
-        print('Length : $restaurantsList.length');
-       
-      }); 
-
-    });
-
-  }
-
+  String name;
+  String img;
+  double rating;
+  int raters;
   bool isFav = false;
+
+  _ProductDetailsState(name, img, rating, raters, isFav);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,7 +123,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
             Text(
               
-              "${restaurantsList[0].name}",
+              "$name",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w800,
@@ -294,7 +269,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         height: 50.0,
         child: RaisedButton(
           child: Text(
-            "BOOK A TABLE",
+            "MAKE A RESERVATION",
             style: TextStyle(
               color: Colors.white,
             ),
@@ -303,7 +278,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Reservation()),
+              MaterialPageRoute(builder: (context) => Menu()),
             );
           },
         ),

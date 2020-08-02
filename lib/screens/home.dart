@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rstikapp/models/restaurants.dart';
 import 'package:rstikapp/screens/dishes.dart';
+import 'package:rstikapp/screens/restaurantScreen.dart';
 import 'package:rstikapp/widgets/grid_product.dart';
 import 'package:rstikapp/widgets/home_category.dart';
 import 'package:rstikapp/widgets/slider_item.dart';
@@ -235,9 +236,16 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                   name: restaurantsList[index].name,
                   rating: 5.0,
                   raters: 23,
-                );
-              },
-            ),
+                  onTap: (){ Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context){
+              return ProductDetails(name: restaurantsList[index].name, img: food['img'],);} 
+                    ), 
+                  );
+                },
+              );
+            },
+          ),
 
             SizedBox(height: 30),
 

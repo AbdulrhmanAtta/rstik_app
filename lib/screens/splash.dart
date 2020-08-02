@@ -56,14 +56,14 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Icon(
-                Icons.fastfood,
-                size: 150.0,
-                color: Theme.of(context).accentColor,
+              Container(
+                
+               child: Image.asset('assets/modern-trial-01.png',
+               fit: BoxFit.fitHeight,),
               ),
 
               SizedBox(width: 40.0),
-              
+
               Container(
                 alignment: Alignment.center,
                 margin: EdgeInsets.only(
@@ -73,10 +73,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   isRepeatingAnimation: false,
                   speed: Duration(milliseconds: 350),
                   onTap: () {},
-                  text: ["${Constants.appName}"],
+                  text: ["..........."],
                   textStyle: TextStyle(
-                    fontSize: 50.0,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 45.0,
+                    fontWeight: FontWeight.w500,
                     color: Theme.of(context).accentColor,
                   ),
                     textAlign: TextAlign.start,

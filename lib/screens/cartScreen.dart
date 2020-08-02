@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rstikapp/models/cart.dart';
 import 'package:rstikapp/screens/checkout.dart';
+import 'package:rstikapp/screens/reservation.dart';
 import 'package:rstikapp/util/foods.dart';
 import 'package:rstikapp/widgets/cart_item.dart';
 
@@ -86,13 +87,7 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
       floatingActionButton: FloatingActionButton(
         tooltip: "Checkout",
         onPressed: (){
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (BuildContext context){
-                return Checkout();
-              },
-            ),
-          );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Reservation(),));
         },
         child: Icon(
           Icons.arrow_forward,

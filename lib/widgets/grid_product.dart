@@ -1,7 +1,10 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:rstikapp/models/restaurants.dart';
 import 'package:rstikapp/screens/restaurantScreen.dart';
 import 'package:rstikapp/util/const.dart';
 import 'package:rstikapp/widgets/smooth_star_rating.dart';
+import 'package:square_in_app_payments/in_app_payments.dart';
 
 class GridProduct extends StatelessWidget {
 
@@ -10,6 +13,7 @@ class GridProduct extends StatelessWidget {
   final bool isFav;
   final double rating;
   final int raters;
+  final Function onTap;
 
 
   GridProduct({
@@ -18,8 +22,10 @@ class GridProduct extends StatelessWidget {
     @required this.img,
     @required this.isFav,
     @required this.rating,
+    @required this.onTap,
     @required this.raters})
       :super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -106,14 +112,8 @@ class GridProduct extends StatelessWidget {
         ],
       ),
       onTap: (){
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context){
-              return ProductDetails();
+            onTap();
             },
-          ),
-        );
-      },
     );
   }
 }
