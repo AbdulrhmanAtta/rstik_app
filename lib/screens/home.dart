@@ -13,12 +13,27 @@ import 'package:square_in_app_payments/in_app_payments.dart';
 
 
 class Home extends StatefulWidget {
+    final String name;
+  final String img;
+  final bool isFav;
+  final double rating;
+  final int raters;
+
+
+  Home({
+    Key key,
+    @required this.name,
+    @required this.img,
+    @required this.isFav,
+    @required this.rating,
+    @required this.raters})
+      :super(key: key);
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
-
+  
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
     for (var i = 0; i < list.length; i++) {

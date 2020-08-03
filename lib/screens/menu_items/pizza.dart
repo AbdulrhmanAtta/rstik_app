@@ -67,7 +67,7 @@ class Pizza extends StatelessWidget {
                  onPressed: (){
                    cart.add(items[index]);
                  },
-                 icon: Icon(Icons.add, color: Colors.red[400],),),
+                 icon: Icon(Icons.add_circle, color: Colors.red[400],),),
             );
           },
         ),

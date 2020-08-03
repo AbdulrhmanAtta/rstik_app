@@ -57,7 +57,7 @@ class Coffee extends StatelessWidget {
             ),
             trailing: IconButton(
                  onPressed: (){},
-                 icon: Icon(Icons.add, color: Colors.red[400],),),
+                 icon: Icon(Icons.add_circle, color: Colors.red[400],),),
           );
         },
       ),

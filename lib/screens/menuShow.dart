@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rstikapp/screens/cartScreen.dart';
 import 'package:rstikapp/screens/checkout.dart';
+import 'package:rstikapp/screens/menu.dart';
 import 'package:rstikapp/screens/reservation.dart';
 import 'package:rstikapp/widgets/badge.dart';
 import 'menu_items/pizzaShow.dart' as pizzaShow;
@@ -103,7 +104,7 @@ class MyTabsState extends State<MenuShow> with SingleTickerProviderStateMixin {
         height: 50.0,
         child: RaisedButton(
           child: Text(
-            "Book A Table",
+            "Make A Reservation",
             style: TextStyle(
               color: Colors.white,
             ),
@@ -112,7 +113,7 @@ class MyTabsState extends State<MenuShow> with SingleTickerProviderStateMixin {
           onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Reservation()),
+              MaterialPageRoute(builder: (context) => Menu()),
             );
           },
         ),

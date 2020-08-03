@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rstikapp/widgets/cart_item.dart';
+import 'package:rstikapp/models/cart.dart';
 
 class IconBadge extends StatefulWidget {
 
@@ -16,7 +19,8 @@ class IconBadge extends StatefulWidget {
 class _IconBadgeState extends State<IconBadge> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Consumer<Cart>(builder: (context, cart, child){
+      return Stack(
       children: <Widget>[
         Icon(
           widget.icon,
@@ -37,7 +41,7 @@ class _IconBadgeState extends State<IconBadge> {
             child: Padding(
               padding: EdgeInsets.only(top: 1),
               child:Text(
-                "3",
+                cart.count.toString(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 8,
@@ -49,5 +53,5 @@ class _IconBadgeState extends State<IconBadge> {
         ),
       ],
     );
-  }
-}
+  
+ },); } }

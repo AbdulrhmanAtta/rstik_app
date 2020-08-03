@@ -24,7 +24,7 @@ class GridProduct extends StatelessWidget {
     @required this.rating,
     @required this.onTap,
     @required this.raters})
-      :super(key: key);
+      :super(key: key);  
 
 
   @override

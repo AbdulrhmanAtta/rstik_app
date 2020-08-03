@@ -28,19 +28,13 @@ class ProductDetails extends StatefulWidget {
       :super(key: key);
 
   @override
-  _ProductDetailsState createState() => _ProductDetailsState(name, img, isFav, rating, raters);
+  _ProductDetailsState createState() => _ProductDetailsState();
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
 
-  String name;
-  String img;
-  double rating;
-  int raters;
+
   bool isFav = false;
-
-  _ProductDetailsState(name, img, rating, raters, isFav);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +84,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      "${foods[1]['img']}",
+                      widget.img,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -122,8 +116,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             SizedBox(height: 10.0),
 
             Text(
-              
-              "$name",
+             widget.name,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w800,
