@@ -245,7 +245,7 @@ class _ProfileState extends State<Profile> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => Contactpage(),));
               },
               // TODO : Khaled Hena onpressed yefta7 el chatting
-              disabledColor: Colors.redAccent.shade400,
+              color: Colors.redAccent.shade400,
               child: Text("Contact Us", style: TextStyle(color: Colors.white),),
             )
           ],
