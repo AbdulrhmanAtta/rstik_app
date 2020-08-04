@@ -20,7 +20,7 @@ class _JoinAppState extends State<JoinApp> with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, initialIndex: 1, length: 2);
+    // _tabController = TabController(vsync: this, initialIndex: 1, length: 1);
     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
   }
 
@@ -29,6 +29,7 @@ class _JoinAppState extends State<JoinApp> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Login Page'),
         automaticallyImplyLeading: false,
         leading: IconButton(
           icon: Icon(
@@ -36,37 +37,39 @@ class _JoinAppState extends State<JoinApp> with SingleTickerProviderStateMixin{
           ),
           onPressed: ()=>Navigator.pop(context),
         ),
-        bottom: TabBar(
-          controller: _tabController,
-          indicatorColor: Theme.of(context).accentColor,
-          labelColor: Theme.of(context).accentColor,
-          unselectedLabelColor: Colors.grey,
-          labelStyle: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.w800,
-          ),
-          unselectedLabelStyle: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.w800,
-          ),
-          tabs: <Widget>[
-            Tab(
-              text: "Login",
-            ),
-            Tab(
-              text: "Register",
-            ),
-          ],
-        ),
+        
+        // TabBar(
+        //   controller: _tabController,
+        //   indicatorColor: Theme.of(context).accentColor,
+        //   labelColor: Theme.of(context).accentColor,
+        //   unselectedLabelColor: Colors.grey,
+        //   labelStyle: TextStyle(
+        //     fontSize: 20.0,
+        //     fontWeight: FontWeight.w800,
+        //   ),
+        //   unselectedLabelStyle: TextStyle(
+        //     fontSize: 20.0,
+        //     fontWeight: FontWeight.w800,
+        //   ),
+        //   tabs: <Widget>[
+        //     Tab(
+        //       text: "Login",
+        //     ),
+        //     Tab(
+        //       text: "Register",
+        //     ),
+        //   ],
+        // ),
       ),
 
-      body: TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          LoginScreen(),
-          RegisterScreen(),
-        ],
-      ),
+      body: RegisterScreen(),
+      // TabBarView(
+      //   controller: _tabController,
+      //   children: <Widget>[
+      //     // LoginScreen(),
+      //     RegisterScreen(),
+      //   ],
+      // ),
 
 
     );

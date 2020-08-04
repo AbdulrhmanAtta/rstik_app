@@ -146,6 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             height: 50.0,
             child: RaisedButton(
+
               child: Text(
                 "LOGIN".toUpperCase(),
                 style: TextStyle(
@@ -153,6 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               onPressed: (){
+                
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context){
