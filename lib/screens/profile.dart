@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:rstikapp/contact.dart';
 import 'package:rstikapp/providers/app_provider.dart';
 import 'package:rstikapp/screens/splash.dart';
 import 'package:rstikapp/util/const.dart';
@@ -240,6 +241,9 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             RaisedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Contactpage(),));
+              },
               // TODO : Khaled Hena onpressed yefta7 el chatting
               disabledColor: Colors.redAccent.shade400,
               child: Text("Contact Us", style: TextStyle(color: Colors.white),),

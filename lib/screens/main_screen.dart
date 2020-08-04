@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
       onWillPop: ()=>Future.value(false),
       child: Scaffold(
         appBar: AppBar(
-             leading: IconButton(icon: Icon(Icons.search, color: Colors.red[]), onPressed: null),
+             leading: IconButton(icon: Icon(Icons.search, color: Colors.red[400]), onPressed: null),
              automaticallyImplyLeading: false,
                             centerTitle: true,
                             title: Text(
