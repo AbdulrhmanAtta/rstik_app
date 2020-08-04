@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_discover_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_discover_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_loader_circle.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable-anydpi-v24/sqip_loader_circle.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_unknown_card_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_unknown_card_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_master_card_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_master_card_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_master_card_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_master_card_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_white_card_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_white_card_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_visa_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_visa_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_visa_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_visa_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_gift_card.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_gift_card.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_diners_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_diners_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_mastercard_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_mastercard_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_visa_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_visa_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_white_card_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_white_card_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_diners_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_diners_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_amex_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_amex_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_jcb_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_jcb_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_jcb_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_jcb_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_loader_circle_done.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable-anydpi-v24/sqip_loader_circle_done.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_discover_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_discover_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_visa_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_visa_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_unknown_card_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_unknown_card_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_mastercard_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_mastercard_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_union_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_union_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_unknown_card_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_unknown_card_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_amex_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_amex_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_discover_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_discover_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_big_union_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_big_union_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_unknown_card_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_unknown_card_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable-anydpi-v24/sqip_small_error_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable-anydpi-v24/sqip_small_error_front.xml"
+    }
+]

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rstikapp/models/restaurants.dart';
 import 'package:rstikapp/screens/dishes.dart';
@@ -12,13 +13,16 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:square_in_app_payments/in_app_payments.dart';
 
 
+Color inactiveColor = Colors.white;
+Color activeColor = Colors.red[400];
+enum PageTypes {all, popular, liked}
+
 class Home extends StatefulWidget {
-    final String name;
+  final String name;
   final String img;
   final bool isFav;
   final double rating;
   final int raters;
-
 
   Home({
     Key key,
@@ -44,47 +48,16 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
   }
 
   int _current = 0;
+  Color activeColor;
+  Color inactiveColor;
+  PageTypes selectedpage;
 
-  List<Restaurant> restaurantsList = [];
+ 
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    
-    DatabaseReference restRef = FirebaseDatabase.instance.reference();
-
-    restRef.child('restaurant').once().then((DataSnapshot snap){
-
-      var keys = snap.value.keys;
-      var data = snap.value;
-
-      restaurantsList.clear();
-
-      for(var key in keys){
-        
-        Restaurant rest = new Restaurant
-        (
-          data[key]['key'],
-          data[key]['image'],
-          data[key]['name'],
-          data[key]['description'],
-
-        );
-
-        restaurantsList.add(rest);
-
-      }
-
-      setState(() {
-
-        print('Length : $restaurantsList.length');
-       
-      }); 
-
-      InAppPayments.setSquareApplicationId('sandbox-sq0idb-77Al5H9PTIkJnO8Ev0eTtg');
-
-    });
+  Future getRestaurants() async{
+    var firestore =  Firestore.instance;
+    QuerySnapshot qn = await firestore.collection('restaurants').getDocuments();
+    return qn.documents;
   }
 
   @override
@@ -92,10 +65,8 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
     super.build(context);
     return Scaffold(
 
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
-        child: ListView(
-          children: <Widget>[
+      body: ListView(
+        children: <Widget>[
 //             Row(
 //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //               children: <Widget>[
@@ -131,80 +102,70 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
 
 //             SizedBox(height: 10.0),
 
-//             //Slider Here
+          //Slider Here
 
-//             CarouselSlider(
-//               height: MediaQuery.of(context).size.height/2.4,
-//               items: map<Widget>(
-//                 foods,
-//                     (index, i){
-//                       Map food = foods[index];
-//                   return SliderItem(
-//                     img: food['img'],
-//                     isFav: false,
-//                     name: food['name'],
-//                     rating: 5.0,
-//                     raters: 23,
-//                   );
-//                 },
-//               ).toList(),
-//               autoPlay: true,
-// //                enlargeCenterPage: true,
-//               viewportFraction: 1.0,
-// //              aspectRatio: 2.0,
-//               onPageChanged: (index) {
-//                 setState(() {
-//                   _current = index;
-//                 });
-//               },
-//             ),
-            SizedBox(height: 20.0),
+          Container(
+            height: MediaQuery.of(context).size.height/2.4,
+            child: Image.asset('assets/home.jpg',
+            fit: BoxFit.fill,),
+          ),
+          SizedBox(height: 20.0),
 
-            // Text(
-            //   "Categories",
-            //   style: TextStyle(
-            //     fontSize: 23,
-            //     fontWeight: FontWeight.w800,
-            //   ),
-            // ),
-            // SizedBox(height: 10.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-              Expanded(
-                  child: FlatButton(
-                  shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
-                  child: Text('All', style: TextStyle(fontSize: 15.0),),),
-              ),
-              Expanded(child: FlatButton(
-                shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
-                child: Text('Popular', style: TextStyle(fontSize: 15.0),),)),
-              Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(side: BorderSide( width: 0.5)),
-                  child: Text('Nearby', style: TextStyle(fontSize: 15.0),),)),
-            ],),
-            // RaisedButton(
-            //   // width: MediaQuery.of(context).size.width,
-            //   child: Center(
-            //     child: ListView.builder(
-            //       scrollDirection: Axis.horizontal, 
-            //       shrinkWrap: true,
-            //       itemCount: categories == null?0:categories.length,
-            //       itemBuilder: (BuildContext context, int index) {
-            //         Map cat = categories[index];
-            //         return HomeCategory(
-            //           title: cat['name'],
-            //           isHome: true,
-            //         );
-            //       },
-            //     ),
-            //   ),
-            // ),
+          // Text(
+          //   "Categories",
+          //   style: TextStyle(
+          //     fontSize: 23,
+          //     fontWeight: FontWeight.w800,
+          //   ),
+          // ),
+          // SizedBox(height: 10.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            RaisedButton(
+           
+            disabledColor: Colors.red[400],
+            shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 1.0, color: Colors.red[400]),
+                  borderRadius: BorderRadius.circular(15)),
+            child: Text('All', style: TextStyle(fontSize: 15.0, color: Colors.white),),),
+            RaisedButton(
+              
+              disabledColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 0.5),
+                  borderRadius: BorderRadius.circular(15)),
+              child: Text('Popular', style: TextStyle(fontSize: 15.0),),),
+            RaisedButton(
+              disabledColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(width: 0.5),
+                  borderRadius: BorderRadius.circular(15)),
+              child: Text('Liked', style: TextStyle(fontSize: 15.0),),),
+          ],),
+          // RaisedButton(
+          //   // width: MediaQuery.of(context).size.width,
+          //   child: Center(
+          //     child: ListView.builder(
+          //       scrollDirection: Axis.horizontal, 
+          //       shrinkWrap: true,
+          //       itemCount: categories == null?0:categories.length,
+          //       itemBuilder: (BuildContext context, int index) {
+          //         Map cat = categories[index];
+          //         return HomeCategory(
+          //           title: cat['name'],
+          //           isHome: true,
+          //         );
+          //       },
+          //     ),
+          //   ),
+          // ),
 
-            SizedBox(height: 20.0),
+          SizedBox(height: 20.0),
 
-            Row(
+          Padding(
+            padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
@@ -228,52 +189,65 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                 ),
               ],
             ),
-            SizedBox(height: 10.0),
+          ),
+          SizedBox(height: 10.0),
 
-            GridView.builder(
-              shrinkWrap: true,
-              primary: false,
-              physics: NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: MediaQuery.of(context).size.width /
-                    (MediaQuery.of(context).size.height / 1.25),
-              ),
-              itemCount: restaurantsList == null ? 0 :restaurantsList.length,
-              itemBuilder: (BuildContext context, int index) {
+          Padding(
+            padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
+            child: FutureBuilder(
+              future: getRestaurants(),
+              builder: (_, snapshot) {
+                if(snapshot.connectionState == ConnectionState.waiting){
+                  return Center(child: Text('Loading....'));
+                } else {
+                  return GridView.builder(
+                shrinkWrap: true,
+                primary: false,
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: MediaQuery.of(context).size.width /
+                      (MediaQuery.of(context).size.height / 1.25),
+                ),
+                itemCount: snapshot.data.length,
+                itemBuilder: (_,index) {
 //                Food food = Food.fromJson(foods[index]);
-                 Map food = foods[index];
+                   Map food = foods[index];
 //                print(foods);
 //                print(foods.length);
-                return GridProduct(
-                  img: food['img'],
-                  isFav: false,
-                  name: restaurantsList[index].name,
-                  rating: 5.0,
-                  raters: 23,
-                  onTap: (){ Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context){
-              return ProductDetails(name: restaurantsList[index].name, img: food['img'],);} 
-                    ), 
-                  );
-                },
-              );
-            },
+                  return GridProduct(
+                    img: food['img'],
+                    isFav: false,
+                    name: snapshot.data[index].data["name"],
+                    rating: 5.0,
+                    raters: 23,
+                    onTap: (){ Navigator.of(context).push(
+        MaterialPageRoute(
+              builder: (BuildContext context){
+                return ProductDetails(name: snapshot.data[index].data["name"], img: food['img'], email: snapshot.data[index].data["email"],);} 
+                      ), 
+                    );
+                  },
+                );
+              },
+        );
+      
+                }
+              },
+            ),
           ),
 
-            SizedBox(height: 30),
+          SizedBox(height: 30),
 
-            // Container(
-            //   child: restaurantsList.length == 0 ? new Text('No data') : 
-            //   ListView.builder(itemCount: restaurantsList == null ? 0 :restaurantsList.length,
-            //   itemBuilder: (BuildContext context, int index){
-            //     return Text('$restaurantsList');
-            //   }) ,
-            // ),
+          // Container(
+          //   child: restaurantsList.length == 0 ? new Text('No data') : 
+          //   ListView.builder(itemCount: restaurantsList == null ? 0 :restaurantsList.length,
+          //   itemBuilder: (BuildContext context, int index){
+          //     return Text('$restaurantsList');
+          //   }) ,
+          // ),
 
-          ],
-        ),
+        ],
       ),
     );
   }

@@ -1,0 +1,274 @@
+[
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_rectangle.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_rectangle.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_save_button.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_save_button.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_edit_text_background.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_edit_text_background.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_small_amex_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_small_amex_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/tooltip_frame_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_edit_text_lock_icon.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_edit_text_lock_icon.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_loader_spinner.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_loader_spinner.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_loader_progress.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_loader_progress.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_loader_check.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_loader_check.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_vector_test.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_small_diners_front.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_small_diners_front.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_button_text_color.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_button_text_color.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_loader_background.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_loader_background.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/tooltip_frame_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_edit_text_bg_unselected.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_edit_text_bg_unselected.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_small_invisible_card.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_small_invisible_card.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/9b806cc71296e01a86c2cbc5d704cc19/appcompat-1.0.0/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_edit_text_bg_selected.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_edit_text_bg_selected.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_small_diners_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_small_diners_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_small_amex_back.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/68dbd27ce3773565a0d94e6163d18cd9/jetified-card-entry-1.4.0/res/drawable/sqip_small_amex_back.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/sqip_loader_lock_icon.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/aeeb9b3ad17acfa0abf30018bcfa5afe/jetified-in-app-payments-1.4.0/res/drawable/sqip_loader_lock_icon.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/square_in_app_payments/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/res/drawable/notification_tile_bg.xml"
+    }
+]

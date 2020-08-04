@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/firebase_database/intermediates/res/merged/release/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/firebase_database/intermediates/res/merged/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/air/AndroidStudioProjects/rstik_app/build/firebase_database/intermediates/res/merged/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/air/.gradle/caches/transforms-2/files-2.1/a7cc1b4d4f4daed744068f697a9e2efc/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_text_light.xml"
+    }
+]

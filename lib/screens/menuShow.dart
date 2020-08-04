@@ -10,16 +10,33 @@ import 'menu_items/burgersShow.dart' as burgerShow;
 import 'menu_items/snacksShow.dart' as snacksShow;
 import 'menu_items/coffeeShow.dart' as coffeeShow;
 import 'notifications.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MenuShow extends StatefulWidget {
+  final String email;
+
+  const MenuShow({Key key, this.email}) : super(key: key);
+
   @override
-  MyTabsState createState() => new MyTabsState();
+  MyTabsState createState() => new MyTabsState(email);
 }
 
 class MyTabsState extends State<MenuShow> with SingleTickerProviderStateMixin {
 
-
+  String email;
+  MyTabsState(this.email);
   TabController controller;
+  String item1;
+  String item2;
+  String item3;
+  String item4;
+  String item5;
+  var firestore = Firestore.instance;
+
+  Future getcategories() async{
+  QuerySnapshot qn  = await firestore.collection('restaurants').document(email).collection('Menu').document(email + 'Menu').collection('Categories').getDocuments();
+    return qn.documents;
+  }
 
   @override
   void initState() {

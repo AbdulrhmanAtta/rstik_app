@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_entry_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sqip.internal.CardEntryActivity"
+    tools:theme="@style/sqip.Theme.CardEntry"
+    >
+
+  <sqip.internal.CreditCardEditor
+      android:id="@+id/card_editor"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/sqip_small_card_editor_margin"
+      android:layout_marginStart="@dimen/sqip_small_card_editor_margin"
+      android:addStatesFromChildren="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingEnd="@dimen/sqip_card_editor_start_end_padding"
+      android:paddingStart="@dimen/sqip_card_editor_start_end_padding"
+      app:layout_constraintBottom_toTopOf="@+id/helper_text_switcher"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed"
+      app:layout_constraintWidth_max="@dimen/sqip_card_editor_max_width"
+      tools:minHeight="36dp"
+      style="?attr/editTextStyle"
+      />
+
+  <sqip.internal.CardImage
+      android:id="@+id/card_image"
+      android:layout_width="@dimen/sqip_small_card_width"
+      android:layout_height="@dimen/sqip_small_card_height"
+      android:contentDescription="@string/sqip_credit_card_image_description"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="@id/card_editor"
+      app:layout_constraintStart_toStartOf="@id/card_editor"
+      app:layout_constraintTop_toTopOf="@id/card_editor"
+      app:srcCompat="@drawable/sqip_small_unknown_card_front"
+      tools:background="@drawable/sqip_small_unknown_card_front"
+      />
+
+
+  <sqip.internal.HelperTextSwitcher
+      android:id="@+id/helper_text_switcher"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/sqip_helper_text_small_card_margin_top"
+      android:text="@string/sqip_helper_text_card"
+      android:textColor="?android:attr/textColorHint"
+      app:layout_constraintBottom_toTopOf="@+id/save_button"
+      app:layout_constraintEnd_toEndOf="@id/card_editor"
+      app:layout_constraintStart_toStartOf="@id/card_editor"
+      app:layout_constraintTop_toBottomOf="@id/card_editor"
+      tools:minHeight="24dp"
+      tools:minWidth="142dp"
+      style="?android:textAppearanceSmall"
+      />
+
+  <Button
+      android:id="@id/save_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/progress_spinner"
+      app:layout_constraintVertical_bias="1.0"
+      />
+
+  <ProgressBar
+      android:id="@id/progress_spinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/sqip_small_card_progress_spinner_margin"
+      android:indeterminate="true"
+      android:visibility="gone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="spread_inside"
+      tools:minHeight="60dp"
+      tools:minWidth="60dp"
+      style="@style/sqip_Loading.Spinner"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

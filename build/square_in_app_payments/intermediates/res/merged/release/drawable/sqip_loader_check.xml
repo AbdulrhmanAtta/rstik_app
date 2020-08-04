@@ -1,0 +1,31 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+  <aapt:attr name="android:drawable">
+    <vector
+        android:name="checkmark"
+        android:height="48dp"
+        android:viewportHeight="48"
+        android:viewportWidth="48"
+        android:width="48dp">
+
+      <path
+          android:name="path"
+          android:pathData="M 34.2 16.8 L 21.1 29.9 L 13.6 22.5"
+          android:strokeColor="#000000"
+          android:strokeMiterLimit="10"
+          android:strokeWidth="3"/>
+    </vector>
+  </aapt:attr>
+  <target android:name="path">
+    <aapt:attr name="android:animation">
+      <objectAnimator
+          android:duration="500"
+          android:interpolator="@android:interpolator/fast_out_slow_in"
+          android:propertyName="trimPathStart"
+          android:valueFrom="1"
+          android:valueTo="0"
+          android:valueType="floatType"/>
+    </aapt:attr>
+  </target>
+</animated-vector>

@@ -16,6 +16,7 @@ class ProductDetails extends StatefulWidget {
   final bool isFav;
   final double rating;
   final int raters;
+  final String email;
 
 
   ProductDetails({
@@ -24,15 +25,17 @@ class ProductDetails extends StatefulWidget {
     @required this.img,
     @required this.isFav,
     @required this.rating,
+    @required this.email,
     @required this.raters})
       :super(key: key);
 
   @override
-  _ProductDetailsState createState() => _ProductDetailsState();
+  _ProductDetailsState createState() => _ProductDetailsState(email);
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-
+  String email;
+  _ProductDetailsState(this.email);
 
   bool isFav = false;
   @override
@@ -158,7 +161,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => MenuShow()),
+                            MaterialPageRoute(builder: (context) => MenuShow(email: email,)),
                           );
                         },
                       ),

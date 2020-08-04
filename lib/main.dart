@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:rstikapp/providers/app_provider.dart';
 import 'package:rstikapp/screens/splash.dart';
@@ -26,9 +27,21 @@ class MyApp extends StatelessWidget {
     return Consumer<AppProvider>(
       builder: (BuildContext context, AppProvider appProvider, Widget child) {
         return MaterialApp(
+
           key: appProvider.key,
           debugShowCheckedModeBanner: false,
           navigatorKey: appProvider.navigatorKey,
+           supportedLocales: [
+            const Locale('en', 'GB'), // English, no country code
+            const Locale('ru', 'RU'), // Hebrew, no country code
+            // ... other locales the app supports
+            ],
+           localizationsDelegates: [
+   // ... app-specific localization delegate[s] here
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            ],
           title: Constants.appName,
           theme: appProvider.theme,
           darkTheme: Constants.darkTheme,
