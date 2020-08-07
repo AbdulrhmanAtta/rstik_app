@@ -123,7 +123,6 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
             RaisedButton(
-           
             disabledColor: Colors.red[400],
             shape: RoundedRectangleBorder(
                   side: BorderSide(width: 1.0, color: Colors.red[400]),
